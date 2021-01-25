@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="styles.css" rel="stylesheet"> -->
+        <style>
+            .caja{
+                width: 200px;
+                height: 200px;
+                cursor: pointer;
+                background: #226fc1;
+                margin: 10px;
+                display: inline-block;
+                text-align: center;
+                font-size: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <button type="" id="btn-saludar">Saludo</button> -->
+        <button type="" id="btn-caja">Crear Caja</button>
+        <section id="contenedor"></section>
+
+        <script>
+            function crearCaja(){
+                var contenedor = document.getElementById('contenedor');
+                var caja = document.createElement('div');
+
+                caja.className ='caja';
+                contenedor.appendChild(caja);
+
+            }
+
+            var btnCaja = document.getElementById('btn-caja');
+            btnCaja.addEventListener('click', crearCaja);
+
+            // function saludo(){
+            //     alert("Juan estamos avanzando...!")
+            // }
+            // function saludo2(){
+            //     alert("Juan estamos forta...!")
+            // }
+
+            // var bntSaludar = document.getElementById('btn-saludar');
+            // bntSaludar.addEventListener('click', saludo2); /* escuchador de evento click */
+            // bntSaludar.addEventListener('click', saludo); /* escuchador de evento click */
+
+
+
+        </script>
+    </body>
+</html>
