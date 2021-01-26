@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Formulario de Registro</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="styles.css" rel="stylesheet" />
+    <style>
+      #continuarTiempo{
+        background: green;
+        color: white
+      }
+
+      
+      #detenerTiempo{
+        background: red;
+        color: white;
+      }
+      
+    </style>
+  </head>
+  <body>
+
+    <button id="continuarTiempo">Continuar Tiempo</button>
+    <button id="detenerTiempo">Detener Tiempo</button>
+    <p id="fecha"></p>
+    <script>
+      var fecha = new Date();
+      // document.write(fecha);
+
+      // console.log(fecha.getHours()+ " " + fecha.getMinutes());
+
+      function mostrarTiempo(){
+        var fecha = new Date();
+        var parrafo = document.getElementById('fecha');
+        parrafo.innerHTML = fecha;
+      }
+
+      var intervalo = setInterval(mostrarTiempo, 1000);
+      
+      document.getElementById('detenerTiempo').addEventListener('click', function(){
+        clearInterval(intervalo);
+      });
+      
+      document.getElementById('continuarTiempo').addEventListener('click', function(){
+        var intervalo = setInterval(mostrarTiempo, 1000);
+      });
+
+
+    </script>
+  </body>
+</html>
